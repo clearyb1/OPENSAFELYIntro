@@ -5,12 +5,20 @@ from study_definition_delivery_common import common_variables, index_date
 
 study = StudyDefinition(
     default_expectations={
-        "date": {"earliest": "1900-01-01", "latest": "today"},
+        "date": {"earliest": "1976-01-01", "latest": "2006-01-01"},
         "rate": "uniform",
         "incidence": 0.5,
     },
     population=patients.registered_with_one_practice_between(
         "2019-02-01", "2020-02-01"
+    ),
+    
+    age=patients.age_as_of(
+        "2020-02-29",
+        return_expectations={
+            "rate": "universal",
+            "int": {"distribution": "population_ages"},
+        },
     ),
     
     dob=patients.date_of_birth(
