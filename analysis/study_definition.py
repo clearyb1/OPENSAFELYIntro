@@ -7,7 +7,7 @@ study = StudyDefinition(
     default_expectations={
         "date": {"earliest": "1976-01-01", "latest": "2006-01-01"},
         "rate": "uniform",
-        "incidence": 0.5,
+        "incidence": 0.98,
     },
     population=patients.registered_with_one_practice_between(
         "2019-02-01", "2020-02-01"
