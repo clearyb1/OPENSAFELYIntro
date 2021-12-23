@@ -16,4 +16,4 @@ fig.savefig("output/descriptive2.png")
 
 #https://stackoverflow.com/questions/32244753/how-to-save-a-seaborn-plot-into-a-file
 
-data = data[data.covid_vacc_third_dose_date != None]
+
