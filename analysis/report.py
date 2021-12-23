@@ -19,9 +19,9 @@ fig.savefig("output/descriptive2.png")
 #Missing Values https://www.geeksforgeeks.org/how-to-fill-nan-values-with-mean-in-pandas/
 
 #Finding the mean of the column having NaN
-mean_value=data['Age'].mean()
+mean_value=data['age'].mean()
   
 # Replace NaNs in column with
 # mean of values in the same column
-data['Age'].fillna(value=mean_value, inplace=True)
+data['age'].fillna(value=mean_value, inplace=True)
 
