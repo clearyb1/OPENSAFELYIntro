@@ -16,4 +16,12 @@ fig.savefig("output/descriptive2.png")
 
 #https://stackoverflow.com/questions/32244753/how-to-save-a-seaborn-plot-into-a-file
 
+#Missing Values https://www.geeksforgeeks.org/how-to-fill-nan-values-with-mean-in-pandas/
+
+#Finding the mean of the column having NaN
+mean_value=data['Age'].mean()
+  
+# Replace NaNs in column with
+# mean of values in the same column
+data['Age'].fillna(value=mean_value, inplace=True)
 
